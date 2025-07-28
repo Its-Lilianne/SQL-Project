@@ -96,7 +96,7 @@ INSERT INTO ProductTB VALUES
 (10, 'Portable SSD 1TB', 'Storage', 125000, 35);
 </pre>
 
-![image alt]()
+![image alt](https://github.com/Its-Lilianne/SQL-Project/blob/a68e7354c4b1271aafea1bc98d07cedd7ea2b9b9/ProductsTB.png)
 
 
 3. **CREATING OrdersTB and Populating the Table**
