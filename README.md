@@ -98,7 +98,6 @@ INSERT INTO ProductTB VALUES
 
 ![image alt](https://github.com/Its-Lilianne/SQL-Project/blob/a68e7354c4b1271aafea1bc98d07cedd7ea2b9b9/ProductsTB.png)
 
-
 4. **CREATING OrdersTB and Populating the Table**
 <pre>
 CREATE TABLE OrdersTB (
