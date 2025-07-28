@@ -123,3 +123,22 @@ INSERT INTO OrdersTB VALUES
 </pre>
 
 ![image alt](https://github.com/Its-Lilianne/SQL-Project/blob/000bda8c6bc6fed32ca6704cedbe04188cf2382e/OrderTB.png)
+
+
+## Answers to Analytical Questions and Results
+
+1. **Return the FirstName and Email of every customer who has ever purchased the product “Wireless Mouse”**
+<pre>
+--Return the FirstName and Email of every customer who has ever purchased the product “Wireless Mouse”
+SELECT FirstName, Email
+FROM CustomerTB
+WHERE CustomerID IN (
+    SELECT CustomerID
+    FROM OrdersTB
+    WHERE ProductID = (
+        SELECT ProductID FROM ProductsTB WHERE ProductName = 'Wireless Mouse'
+    )
+);
+</pre>
+
+![image alt]()
