@@ -20,6 +20,7 @@ The primary goal of this project is to
 ### The Process 
 1. Open your SSMS
 2. Load and execute the syntax like:
+
    i. **Create** a new database called **AxiaStores**
    ii. **Create** tables named **CustomerTB, ProductTB,** and **OrderTB** using proper data types and data constraints
    iii. **Populate** the created tables with the necessary/given data
