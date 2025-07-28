@@ -99,7 +99,7 @@ INSERT INTO ProductTB VALUES
 ![image alt](https://github.com/Its-Lilianne/SQL-Project/blob/a68e7354c4b1271aafea1bc98d07cedd7ea2b9b9/ProductsTB.png)
 
 
-3. **CREATING OrdersTB and Populating the Table**
+4. **CREATING OrdersTB and Populating the Table**
 <pre>
 CREATE TABLE OrdersTB (
     OrderID INT PRIMARY KEY,
@@ -123,4 +123,4 @@ INSERT INTO OrdersTB VALUES
 (1010, 10, 10, '2025-06-25', 2);
 </pre>
 
-![image alt]()
+![image alt](https://github.com/Its-Lilianne/SQL-Project/blob/000bda8c6bc6fed32ca6704cedbe04188cf2382e/OrderTB.png)
