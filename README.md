@@ -3,6 +3,17 @@
 ## Project Overview
 This project presents a comprehensive SQL-based solution for AxiaStores, an electronics and accessories retail business. It involves designing and implementing a relational database with three core tables: Customer, Product, and Orders. While performing various analytical queries to extract insights.
 
+
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Objectives](#objectives)
+- [Tools and Methodologies](#tools-and-methodologies)
+- [Key Analytical Questions](#key-analytical-questions)
+- [Samples of SQL Queries and Results](#samples-of-sql-queries-and-results)
+- [Answers to Analytical Questions and Results](#answers-to-analytical-questions-and-results)
+- [References](#references)
+
+
 ## Objectives
 The primary goal of this project is to
 1. Create a sample relational database
@@ -141,4 +152,67 @@ WHERE CustomerID IN (
 );
 </pre>
 
+![image alt](https://github.com/Its-Lilianne/SQL-Project/blob/6bb60761f91bb1eb207c8c7d12a5189eb5e1c760/Purchase_product%20wireless.png)
+
+
+2. **List all customers’ full names in ascending alphabetical order (LastName, then 
+FirstName)**
+<pre>
+SELECT LastName + ' ' + FirstName AS FullName
+FROM CustomerTB
+ORDER BY LastName ASC, FirstName ASC;
+</pre>
+
 ![image alt]()
+
+
+3. **Show every order together with the customer’s full name, the product name, quantity, 
+      unit price, total price (quantity × unit price), and order date.**
+<pre>
+  SELECT 
+    c.FirstName + ' ' + c.LastName AS CustomerName,
+    p.ProductName,
+    o.Quantity,
+    p.UnitPrice,
+    (o.Quantity * p.UnitPrice) AS TotalPrice,
+    o.OrderDate
+FROM OrdersTB o
+JOIN CustomerTB c ON o.CustomerID = c.CustomerID
+JOIN ProductsTB p ON o.ProductID = p.ProductID;
+</pre>
+
+![image alt]()
+
+
+4. **Show average sales per product category and sort in descending order**
+<pre>
+  SELECT 
+    p.Category,
+    AVG(o.Quantity * p.UnitPrice) AS AverageSales
+FROM OrdersTB o
+JOIN ProductsTB p ON o.ProductID = p.ProductID
+GROUP BY p.Category
+ORDER BY AverageSales DESC;
+</pre>
+
+![image alt]()
+
+
+5. **Which city generated the highest revenue for AxiaStores?**
+<pre>
+  SELECT TOP 1 
+    c.City,
+    SUM(o.Quantity * p.UnitPrice) AS TotalRevenue
+FROM OrdersTB o
+JOIN CustomerTB c ON o.CustomerID = c.CustomerID
+JOIN ProductsTB p ON o.ProductID = p.ProductID
+GROUP BY c.City
+ORDER BY TotalRevenue DESC;
+</pre>
+
+![image alt]()
+
+
+### References
+- [Axia Africa SQL Exam](https://drive.google.com/file/d/13chnDFUr7NqbyPSRqy65d9pgeVCM86Ix/view)
+- [Axia Africa](https://student.axia.africa)
