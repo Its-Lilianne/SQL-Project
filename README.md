@@ -163,7 +163,7 @@ FROM CustomerTB
 ORDER BY LastName ASC, FirstName ASC;
 </pre>
 
-![image alt]()
+![image alt](https://github.com/Its-Lilianne/SQL-Project/blob/c56f640ccc7a70ce9e262420bd9d5f4c10e22031/Customer_Fullnames.png)
 
 
 3. **Show every order together with the customer’s full name, the product name, quantity, 
