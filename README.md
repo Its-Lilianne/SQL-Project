@@ -210,7 +210,7 @@ GROUP BY c.City
 ORDER BY TotalRevenue DESC;
 </pre>
 
-![image alt]()
+![image alt](https://github.com/Its-Lilianne/SQL-Project/blob/b7b29abddbea7e2c09a386da381616978b37ca0d/City_Highest_Revenue.png)
 
 
 ### References
