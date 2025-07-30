@@ -181,7 +181,7 @@ JOIN CustomerTB c ON o.CustomerID = c.CustomerID
 JOIN ProductsTB p ON o.ProductID = p.ProductID;
 </pre>
 
-![image alt]()
+![image alt](https://github.com/Its-Lilianne/SQL-Project/blob/2de689f1333818b0f8fcf5fba763ad45ac880e56/Detailed_Order_Summary.png)
 
 
 4. **Show average sales per product category and sort in descending order**
